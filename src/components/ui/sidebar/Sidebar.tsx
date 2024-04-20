@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import clsx from "clsx";
-import { IoCloseOutline } from "react-icons/io5";
+import { IoCloseOutline, IoLogOutOutline, IoNewspaperOutline } from "react-icons/io5";
 import { useUIStore } from "@/store";
 
 export const Sidebar = () => {
@@ -45,8 +45,17 @@ export const Sidebar = () => {
                     onClick={closeMenu}
                     className="flex items-center mt-10 p-2 hover:bg-sky-700 rounded transition-all dark:hover:bg-gray-700"
                 >
-
+                    <IoNewspaperOutline size={ 20 } />
                     <span className="ml-3 text-xl">Agenda</span>
+                </Link>
+
+                <Link
+                    href='/auth/login'
+                    onClick={closeMenu}
+                    className="flex items-center mt-10 p-2 hover:bg-sky-700 rounded transition-all dark:hover:bg-gray-700"
+                >
+                    <IoLogOutOutline size={ 20 }/>
+                    <span className="ml-3 text-xl">Logout</span>
                 </Link>
 
                 {/* Line separator */}
